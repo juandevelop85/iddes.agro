@@ -7,7 +7,7 @@ export const TOKEN_LOCALITY_KEY = 'tokenLocalityKey';
 export const TOKEN_GEOLOCATION_KEY = 'tokenGeolocationKey';
 export const TOKEN_PUSH_NOTIFICATION = 'tokenPushNotification';
 export const DATA_PRODUCT_STORE = 'dataProductStore';
-//export const URL_SERVER = 'http://alican.eastus2.cloudapp.azure.com/';
+//export const URL_SERVER = 'http://iddesagro.eastus2.cloudapp.azure.com/';
 //export const URL_SERVER = URL_SERVER + 'api/v1/';
 
 export const URL_SERVER = 'http://localhost/';

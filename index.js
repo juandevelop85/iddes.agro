@@ -8,37 +8,28 @@ import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
 */
-
-/**
- * @format
- */
-
-/*import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
-
-AppRegistry.registerComponent(appName, () => App);*/
-
-import {Provider} from 'react-redux';
 import React from 'react';
-import {name as appName} from './app.json';
 import {AppRegistry} from 'react-native';
+import {Provider} from 'react-redux';
+import {name as appName} from './app.json';
+import {createStore, combineReducers} from 'redux';
 import configureStore from './configureStore';
-import {AppWithNavigationState} from './src/navigators';
+import App from './src/navigators';
 import './ReactotronConfig';
 if (__DEV__) {
 }
 
-const store = configureStore();
+// A very simple store
+let store = configureStore();
 
-class ChristusTelemedicina extends React.Component {
+class IddesAgro extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <AppWithNavigationState />
+        <App />
       </Provider>
     );
   }
 }
 
-AppRegistry.registerComponent(appName, () => ChristusTelemedicina);
+AppRegistry.registerComponent(appName, () => IddesAgro);

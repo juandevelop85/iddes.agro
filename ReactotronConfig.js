@@ -9,7 +9,7 @@ import Reactotron, {
 import {reactotronRedux} from 'reactotron-redux';
 
 const reactotron = Reactotron.configure({
-  name: 'Alican',
+  name: 'Iddesagro',
   host: 'localhost',
 })
   .use(trackGlobalErrors())

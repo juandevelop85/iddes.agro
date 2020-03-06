@@ -40,7 +40,7 @@ const initialState = {
   selectedDirection: '',
 };
 
-function alicanState(state = initialState, action) {
+function iddesagroState(state = initialState, action) {
   switch (action.type) {
     case LOAD_SUCCESS:
       return {
@@ -124,4 +124,4 @@ function alicanState(state = initialState, action) {
   }
 }
 
-export default alicanState;
+export default iddesagroState;

@@ -160,7 +160,7 @@ class CreateOfflineRegion extends React.Component {
     const {offlineRegionStatus} = this.state;
 
     return (
-      <Page {...this.props}>
+      <>
         <MapboxGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
@@ -222,7 +222,7 @@ class CreateOfflineRegion extends React.Component {
             </View>
           </Bubble>
         ) : null}
-      </Page>
+      </>
     );
   }
 }

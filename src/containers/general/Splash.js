@@ -7,10 +7,13 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, AsyncStorage} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import {loadLocation, setCountCart} from '../../actions';
+import AsyncStorage from '@react-native-community/async-storage';
+
 import {connect} from 'react-redux';
-import {StackActions, NavigationActions} from 'react-navigation';
+
+import {StackActions, CommonActions} from '@react-navigation/native';
 import {
   DATA_PRODUCT_STORE,
   DATA_USER_KEY,
@@ -25,18 +28,18 @@ class Splash extends Component {
 
   validateSession = async () => {
     let dataUser = await AsyncStorage.getItem(TOKEN_USER_KEY);
-
+    Reactotron.log({errorcito: this.props});
     if (dataUser) {
-      this.props.changeScreen('Menu');
+      this.props.changeScreen(this.props.navigation, 'Menu');
     } else {
-      this.props.changeScreen('Login');
+      this.props.changeScreen(this.props.navigation, 'Menu');
     }
   };
 
   render() {
     return (
       <View style={styles.content}>
-        <Text style={styles.text}>alican</Text>
+        <Text style={styles.text}>Iddes.agro</Text>
       </View>
     );
   }
@@ -51,29 +54,25 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#EEEEEE',
-    fontFamily: 'Comfortaa-Bold',
+    //fontFamily: 'Comfortaa-Bold',
     fontSize: 50,
   },
 });
 
-Splash.navigationOptions = {
-  header: null,
-};
-
 const mapStateToProps = state => {
   return {
-    dataStore: state.alicanState.dataStore,
+    dataStore: state.iddesagroState.dataStore,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     loadLocation: location => dispatch(loadLocation(location)),
-    changeScreen: route =>
-      dispatch(
-        StackActions.reset({
+    changeScreen: (navigation, route) =>
+      navigation.dispatch(
+        CommonActions.reset({
           index: 0,
-          actions: [NavigationActions.navigate({routeName: route})],
+          routes: [{name: route}],
         }),
       ),
   };

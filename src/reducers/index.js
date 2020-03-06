@@ -1,15 +1,9 @@
 import {combineReducers} from 'redux';
-import {createNavigationReducer} from 'react-navigation-redux-helpers';
-import alicanState from './appStore';
-import navState from './navStore';
-import {AppNavigator} from '../navigators';
-
-const navReducer = createNavigationReducer(AppNavigator);
+import iddesagroState from './appStore';
+//import navState from './navStore';
 
 const AppReducer = combineReducers({
-  nav: navReducer,
-  alicanState,
-  navState,
+  iddesagroState,
 });
 
 export default AppReducer;
