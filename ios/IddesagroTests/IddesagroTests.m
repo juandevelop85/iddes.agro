@@ -14,11 +14,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface riegos_programadosTests : XCTestCase
+@interface IddesagroTests : XCTestCase
 
 @end
 
-@implementation riegos_programadosTests
+@implementation IddesagroTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

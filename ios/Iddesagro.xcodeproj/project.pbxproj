@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* riegos_programadosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* riegos_programadosTests.m */; };
+		00E356F31AD99517003FC87E /* IddesagroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* IddesagroTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -15,11 +15,27 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* riegos_programadosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* riegos_programadosTests.m */; };
-		893544F4A83E7F55ED2749F2 /* Pods_riegos_programados.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9C87E91A91396650F14C7A /* Pods_riegos_programados.framework */; };
-		9E53EF8C435A5EE6E5644958 /* Pods_riegos_programadosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202A3415B425D1D8EFFB0EE4 /* Pods_riegos_programadosTests.framework */; };
-		A79CF7E4324A53F0EB304D8A /* libPods-riegos_programados-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 207E4FA259D461E2F0845DFE /* libPods-riegos_programados-tvOSTests.a */; };
-		D21D29313998E596BD6F4673 /* libPods-riegos_programados-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F99CEA14538278F3865C6CB7 /* libPods-riegos_programados-tvOS.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* IddesagroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* IddesagroTests.m */; };
+		893544F4A83E7F55ED2749F2 /* Pods_Iddesagro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9C87E91A91396650F14C7A /* Pods_Iddesagro.framework */; };
+		9E53EF8C435A5EE6E5644958 /* Pods_IddesagroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202A3415B425D1D8EFFB0EE4 /* Pods_IddesagroTests.framework */; };
+		A79CF7E4324A53F0EB304D8A /* libPods-Iddesagro-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 207E4FA259D461E2F0845DFE /* libPods-Iddesagro-tvOSTests.a */; };
+		D21D29313998E596BD6F4673 /* libPods-Iddesagro-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F99CEA14538278F3865C6CB7 /* libPods-Iddesagro-tvOS.a */; };
+		163C0D588420436A997BAB93 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0640545CDA647199E5F88CD /* AntDesign.ttf */; };
+		8810626A87094B34B2FE4B79 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B883D91AE3BF4ADBB68293F0 /* Entypo.ttf */; };
+		0A920DF15834440EA78F389C /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 014D26D1C4DE405BADEF72D3 /* EvilIcons.ttf */; };
+		56029FD0A7764A0F9245A248 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 642C131542DF451A87D1369B /* Feather.ttf */; };
+		0A109226CAF848B3BBC3987C /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D650F417AA0849D4A9B510AD /* FontAwesome.ttf */; };
+		FBD38E26B48D4164B580D443 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FD07AAE03D646DD988AEF39 /* FontAwesome5_Brands.ttf */; };
+		9884DD2A1C9F447AB6BB42E9 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5B1BF4B4DF64943940D4811 /* FontAwesome5_Regular.ttf */; };
+		7D025E8B912D4675B9CBFBE3 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04014EEBC67D4EF0B2A276FE /* FontAwesome5_Solid.ttf */; };
+		7D03760BD8F24D7A9CE24828 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1EBF8A47E014E9BA4F9BC59 /* Fontisto.ttf */; };
+		1AE8A478856340DCBE883984 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F07BA6F6474405881282193 /* Foundation.ttf */; };
+		E234D9D27AC94157B900CF36 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33B27AE5478F4619A23E907E /* Ionicons.ttf */; };
+		0E230E4932D04AC8AA70E84F /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A101A605AACD47EBB1BC63E7 /* MaterialCommunityIcons.ttf */; };
+		DC392E5D05FD476E9FF40798 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E599C1D9CFD424BAA5C0E4A /* MaterialIcons.ttf */; };
+		83E3E7695EA340A986AFF5EA /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB0EB4299B444AF1A803EC0D /* Octicons.ttf */; };
+		A9E2255E6AA14FA8BADBD6CE /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20EBE7857D2A4AB18F4419C3 /* SimpleLineIcons.ttf */; };
+		3B07892AFB3D41B3A820A0ED /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02A78AE9DB8A4C4E92D08D18 /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,45 +44,61 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = riegos_programados;
+			remoteInfo = Iddesagro;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "riegos_programados-tvOS";
+			remoteInfo = "Iddesagro-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* riegos_programadosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riegos_programadosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* IddesagroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IddesagroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* riegos_programadosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = riegos_programadosTests.m; sourceTree = "<group>"; };
-		1014E740F96C2C0797B9DFCF /* Pods-riegos_programadosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riegos_programadosTests.release.xcconfig"; path = "Target Support Files/Pods-riegos_programadosTests/Pods-riegos_programadosTests.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* riegos_programados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = riegos_programados.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = riegos_programados/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = riegos_programados/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* IddesagroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IddesagroTests.m; sourceTree = "<group>"; };
+		1014E740F96C2C0797B9DFCF /* Pods-IddesagroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IddesagroTests.release.xcconfig"; path = "Target Support Files/Pods-IddesagroTests/Pods-IddesagroTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Iddesagro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iddesagro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Iddesagro/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Iddesagro/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = riegos_programados/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = riegos_programados/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = riegos_programados/main.m; sourceTree = "<group>"; };
-		202A3415B425D1D8EFFB0EE4 /* Pods_riegos_programadosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riegos_programadosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		207E4FA259D461E2F0845DFE /* libPods-riegos_programados-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-riegos_programados-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* riegos_programados-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "riegos_programados-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* riegos_programados-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "riegos_programados-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		53DB7E25EC147C8412C81B8E /* Pods-riegos_programados-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riegos_programados-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-riegos_programados-tvOSTests/Pods-riegos_programados-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		5F34743AEE64395F8828012C /* Pods-riegos_programados.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riegos_programados.debug.xcconfig"; path = "Target Support Files/Pods-riegos_programados/Pods-riegos_programados.debug.xcconfig"; sourceTree = "<group>"; };
-		630BBEF97D67F0A78537D88A /* Pods-riegos_programados-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riegos_programados-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-riegos_programados-tvOSTests/Pods-riegos_programados-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		78299C36A01E8316FF65D767 /* Pods-riegos_programados-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riegos_programados-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-riegos_programados-tvOS/Pods-riegos_programados-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		7B4B9F9B7121A921A595C478 /* Pods-riegos_programados.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riegos_programados.release.xcconfig"; path = "Target Support Files/Pods-riegos_programados/Pods-riegos_programados.release.xcconfig"; sourceTree = "<group>"; };
-		D0914E209BB4ADFD8F482937 /* Pods-riegos_programadosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riegos_programadosTests.debug.xcconfig"; path = "Target Support Files/Pods-riegos_programadosTests/Pods-riegos_programadosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Iddesagro/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Iddesagro/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Iddesagro/main.m; sourceTree = "<group>"; };
+		202A3415B425D1D8EFFB0EE4 /* Pods_IddesagroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IddesagroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		207E4FA259D461E2F0845DFE /* libPods-Iddesagro-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Iddesagro-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* Iddesagro-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iddesagro-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Iddesagro-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iddesagro-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DB7E25EC147C8412C81B8E /* Pods-Iddesagro-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iddesagro-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Iddesagro-tvOSTests/Pods-Iddesagro-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F34743AEE64395F8828012C /* Pods-Iddesagro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iddesagro.debug.xcconfig"; path = "Target Support Files/Pods-Iddesagro/Pods-Iddesagro.debug.xcconfig"; sourceTree = "<group>"; };
+		630BBEF97D67F0A78537D88A /* Pods-Iddesagro-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iddesagro-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Iddesagro-tvOSTests/Pods-Iddesagro-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78299C36A01E8316FF65D767 /* Pods-Iddesagro-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iddesagro-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Iddesagro-tvOS/Pods-Iddesagro-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7B4B9F9B7121A921A595C478 /* Pods-Iddesagro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iddesagro.release.xcconfig"; path = "Target Support Files/Pods-Iddesagro/Pods-Iddesagro.release.xcconfig"; sourceTree = "<group>"; };
+		D0914E209BB4ADFD8F482937 /* Pods-IddesagroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IddesagroTests.debug.xcconfig"; path = "Target Support Files/Pods-IddesagroTests/Pods-IddesagroTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F61CCA7CA7E73C43D39C375E /* Pods-riegos_programados-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riegos_programados-tvOS.release.xcconfig"; path = "Target Support Files/Pods-riegos_programados-tvOS/Pods-riegos_programados-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		F99CEA14538278F3865C6CB7 /* libPods-riegos_programados-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-riegos_programados-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD9C87E91A91396650F14C7A /* Pods_riegos_programados.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riegos_programados.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61CCA7CA7E73C43D39C375E /* Pods-Iddesagro-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iddesagro-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Iddesagro-tvOS/Pods-Iddesagro-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		F99CEA14538278F3865C6CB7 /* libPods-Iddesagro-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Iddesagro-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9C87E91A91396650F14C7A /* Pods_Iddesagro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iddesagro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0640545CDA647199E5F88CD /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B883D91AE3BF4ADBB68293F0 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		014D26D1C4DE405BADEF72D3 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		642C131542DF451A87D1369B /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D650F417AA0849D4A9B510AD /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6FD07AAE03D646DD988AEF39 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C5B1BF4B4DF64943940D4811 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		04014EEBC67D4EF0B2A276FE /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D1EBF8A47E014E9BA4F9BC59 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5F07BA6F6474405881282193 /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		33B27AE5478F4619A23E907E /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A101A605AACD47EBB1BC63E7 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3E599C1D9CFD424BAA5C0E4A /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AB0EB4299B444AF1A803EC0D /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		20EBE7857D2A4AB18F4419C3 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		02A78AE9DB8A4C4E92D08D18 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E53EF8C435A5EE6E5644958 /* Pods_riegos_programadosTests.framework in Frameworks */,
+				9E53EF8C435A5EE6E5644958 /* Pods_IddesagroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				893544F4A83E7F55ED2749F2 /* Pods_riegos_programados.framework in Frameworks */,
+				893544F4A83E7F55ED2749F2 /* Pods_Iddesagro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D21D29313998E596BD6F4673 /* libPods-riegos_programados-tvOS.a in Frameworks */,
+				D21D29313998E596BD6F4673 /* libPods-Iddesagro-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +130,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79CF7E4324A53F0EB304D8A /* libPods-riegos_programados-tvOSTests.a in Frameworks */,
+				A79CF7E4324A53F0EB304D8A /* libPods-Iddesagro-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* riegos_programadosTests */ = {
+		00E356EF1AD99517003FC87E /* IddesagroTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* riegos_programadosTests.m */,
+				00E356F21AD99517003FC87E /* IddesagroTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = riegos_programadosTests;
+			path = IddesagroTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,7 +154,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* riegos_programados */ = {
+		13B07FAE1A68108700A75B9A /* Iddesagro */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -133,7 +165,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = riegos_programados;
+			name = Iddesagro;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -141,10 +173,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				F99CEA14538278F3865C6CB7 /* libPods-riegos_programados-tvOS.a */,
-				207E4FA259D461E2F0845DFE /* libPods-riegos_programados-tvOSTests.a */,
-				FD9C87E91A91396650F14C7A /* Pods_riegos_programados.framework */,
-				202A3415B425D1D8EFFB0EE4 /* Pods_riegos_programadosTests.framework */,
+				F99CEA14538278F3865C6CB7 /* libPods-Iddesagro-tvOS.a */,
+				207E4FA259D461E2F0845DFE /* libPods-Iddesagro-tvOSTests.a */,
+				FD9C87E91A91396650F14C7A /* Pods_Iddesagro.framework */,
+				202A3415B425D1D8EFFB0EE4 /* Pods_IddesagroTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,14 +184,14 @@
 		4F67DE8C522CF4F1E887B285 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5F34743AEE64395F8828012C /* Pods-riegos_programados.debug.xcconfig */,
-				7B4B9F9B7121A921A595C478 /* Pods-riegos_programados.release.xcconfig */,
-				78299C36A01E8316FF65D767 /* Pods-riegos_programados-tvOS.debug.xcconfig */,
-				F61CCA7CA7E73C43D39C375E /* Pods-riegos_programados-tvOS.release.xcconfig */,
-				630BBEF97D67F0A78537D88A /* Pods-riegos_programados-tvOSTests.debug.xcconfig */,
-				53DB7E25EC147C8412C81B8E /* Pods-riegos_programados-tvOSTests.release.xcconfig */,
-				D0914E209BB4ADFD8F482937 /* Pods-riegos_programadosTests.debug.xcconfig */,
-				1014E740F96C2C0797B9DFCF /* Pods-riegos_programadosTests.release.xcconfig */,
+				5F34743AEE64395F8828012C /* Pods-Iddesagro.debug.xcconfig */,
+				7B4B9F9B7121A921A595C478 /* Pods-Iddesagro.release.xcconfig */,
+				78299C36A01E8316FF65D767 /* Pods-Iddesagro-tvOS.debug.xcconfig */,
+				F61CCA7CA7E73C43D39C375E /* Pods-Iddesagro-tvOS.release.xcconfig */,
+				630BBEF97D67F0A78537D88A /* Pods-Iddesagro-tvOSTests.debug.xcconfig */,
+				53DB7E25EC147C8412C81B8E /* Pods-Iddesagro-tvOSTests.release.xcconfig */,
+				D0914E209BB4ADFD8F482937 /* Pods-IddesagroTests.debug.xcconfig */,
+				1014E740F96C2C0797B9DFCF /* Pods-IddesagroTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -175,12 +207,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* riegos_programados */,
+				13B07FAE1A68108700A75B9A /* Iddesagro */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* riegos_programadosTests */,
+				00E356EF1AD99517003FC87E /* IddesagroTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				4F67DE8C522CF4F1E887B285 /* Pods */,
+				6BD8919145124DBC93F3D251 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -190,20 +223,44 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* riegos_programados.app */,
-				00E356EE1AD99517003FC87E /* riegos_programadosTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* riegos_programados-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* riegos_programados-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Iddesagro.app */,
+				00E356EE1AD99517003FC87E /* IddesagroTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Iddesagro-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Iddesagro-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6BD8919145124DBC93F3D251 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				E0640545CDA647199E5F88CD /* AntDesign.ttf */,
+				B883D91AE3BF4ADBB68293F0 /* Entypo.ttf */,
+				014D26D1C4DE405BADEF72D3 /* EvilIcons.ttf */,
+				642C131542DF451A87D1369B /* Feather.ttf */,
+				D650F417AA0849D4A9B510AD /* FontAwesome.ttf */,
+				6FD07AAE03D646DD988AEF39 /* FontAwesome5_Brands.ttf */,
+				C5B1BF4B4DF64943940D4811 /* FontAwesome5_Regular.ttf */,
+				04014EEBC67D4EF0B2A276FE /* FontAwesome5_Solid.ttf */,
+				D1EBF8A47E014E9BA4F9BC59 /* Fontisto.ttf */,
+				5F07BA6F6474405881282193 /* Foundation.ttf */,
+				33B27AE5478F4619A23E907E /* Ionicons.ttf */,
+				A101A605AACD47EBB1BC63E7 /* MaterialCommunityIcons.ttf */,
+				3E599C1D9CFD424BAA5C0E4A /* MaterialIcons.ttf */,
+				AB0EB4299B444AF1A803EC0D /* Octicons.ttf */,
+				20EBE7857D2A4AB18F4419C3 /* SimpleLineIcons.ttf */,
+				02A78AE9DB8A4C4E92D08D18 /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* riegos_programadosTests */ = {
+		00E356ED1AD99517003FC87E /* IddesagroTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "riegos_programadosTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "IddesagroTests" */;
 			buildPhases = (
 				56871F0841A91B1F3C482E4D /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -215,14 +272,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = riegos_programadosTests;
-			productName = riegos_programadosTests;
-			productReference = 00E356EE1AD99517003FC87E /* riegos_programadosTests.xctest */;
+			name = IddesagroTests;
+			productName = IddesagroTests;
+			productReference = 00E356EE1AD99517003FC87E /* IddesagroTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* riegos_programados */ = {
+		13B07F861A680F5B00A75B9A /* Iddesagro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "riegos_programados" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Iddesagro" */;
 			buildPhases = (
 				B91F31BFC2DB8AE4290B80C5 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -236,14 +293,14 @@
 			);
 			dependencies = (
 			);
-			name = riegos_programados;
-			productName = riegos_programados;
-			productReference = 13B07F961A680F5B00A75B9A /* riegos_programados.app */;
+			name = Iddesagro;
+			productName = Iddesagro;
+			productReference = 13B07F961A680F5B00A75B9A /* Iddesagro.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* riegos_programados-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Iddesagro-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "riegos_programados-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Iddesagro-tvOS" */;
 			buildPhases = (
 				80A2D98937888C1EC4C1C1A0 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -256,14 +313,14 @@
 			);
 			dependencies = (
 			);
-			name = "riegos_programados-tvOS";
-			productName = "riegos_programados-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* riegos_programados-tvOS.app */;
+			name = "Iddesagro-tvOS";
+			productName = "Iddesagro-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Iddesagro-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* riegos_programados-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Iddesagro-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "riegos_programados-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Iddesagro-tvOSTests" */;
 			buildPhases = (
 				06D51E9DEBF2A86E815A8279 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -275,9 +332,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "riegos_programados-tvOSTests";
-			productName = "riegos_programados-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* riegos_programados-tvOSTests.xctest */;
+			name = "Iddesagro-tvOSTests";
+			productName = "Iddesagro-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Iddesagro-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -286,7 +343,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -304,7 +361,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "riegos_programados" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Iddesagro" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -317,10 +374,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* riegos_programados */,
-				00E356ED1AD99517003FC87E /* riegos_programadosTests */,
-				2D02E47A1E0B4A5D006451C7 /* riegos_programados-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* riegos_programados-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Iddesagro */,
+				00E356ED1AD99517003FC87E /* IddesagroTests */,
+				2D02E47A1E0B4A5D006451C7 /* Iddesagro-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Iddesagro-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -339,6 +396,22 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				163C0D588420436A997BAB93 /* AntDesign.ttf in Resources */,
+				8810626A87094B34B2FE4B79 /* Entypo.ttf in Resources */,
+				0A920DF15834440EA78F389C /* EvilIcons.ttf in Resources */,
+				56029FD0A7764A0F9245A248 /* Feather.ttf in Resources */,
+				0A109226CAF848B3BBC3987C /* FontAwesome.ttf in Resources */,
+				FBD38E26B48D4164B580D443 /* FontAwesome5_Brands.ttf in Resources */,
+				9884DD2A1C9F447AB6BB42E9 /* FontAwesome5_Regular.ttf in Resources */,
+				7D025E8B912D4675B9CBFBE3 /* FontAwesome5_Solid.ttf in Resources */,
+				7D03760BD8F24D7A9CE24828 /* Fontisto.ttf in Resources */,
+				1AE8A478856340DCBE883984 /* Foundation.ttf in Resources */,
+				E234D9D27AC94157B900CF36 /* Ionicons.ttf in Resources */,
+				0E230E4932D04AC8AA70E84F /* MaterialCommunityIcons.ttf in Resources */,
+				DC392E5D05FD476E9FF40798 /* MaterialIcons.ttf in Resources */,
+				83E3E7695EA340A986AFF5EA /* Octicons.ttf in Resources */,
+				A9E2255E6AA14FA8BADBD6CE /* SimpleLineIcons.ttf in Resources */,
+				3B07892AFB3D41B3A820A0ED /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +462,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-riegos_programados-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Iddesagro-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -425,7 +498,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-riegos_programadosTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-IddesagroTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -447,7 +520,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-riegos_programados-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Iddesagro-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -460,7 +533,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-riegos_programados/Pods-riegos_programados-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Iddesagro/Pods-Iddesagro-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
 				"${BUILT_PRODUCTS_DIR}/FBReactNativeSpec/FBReactNativeSpec.framework",
 				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
@@ -539,7 +612,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-riegos_programados/Pods-riegos_programados-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Iddesagro/Pods-Iddesagro-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B91F31BFC2DB8AE4290B80C5 /* [CP] Check Pods Manifest.lock */ = {
@@ -557,7 +630,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-riegos_programados-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Iddesagro-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -609,7 +682,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* riegos_programadosTests.m in Sources */,
+				00E356F31AD99517003FC87E /* IddesagroTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,7 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* riegos_programadosTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* IddesagroTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,12 +717,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* riegos_programados */;
+			target = 13B07F861A680F5B00A75B9A /* Iddesagro */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* riegos_programados-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Iddesagro-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -661,7 +734,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = riegos_programados;
+			path = Iddesagro;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -669,14 +742,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0914E209BB4ADFD8F482937 /* Pods-riegos_programadosTests.debug.xcconfig */;
+			baseConfigurationReference = D0914E209BB4ADFD8F482937 /* Pods-IddesagroTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = riegos_programadosTests/Info.plist;
+				INFOPLIST_FILE = IddesagroTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -686,17 +759,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/riegos_programados.app/riegos_programados";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iddesagro.app/Iddesagro";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1014E740F96C2C0797B9DFCF /* Pods-riegos_programadosTests.release.xcconfig */;
+			baseConfigurationReference = 1014E740F96C2C0797B9DFCF /* Pods-IddesagroTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = riegos_programadosTests/Info.plist;
+				INFOPLIST_FILE = IddesagroTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -706,18 +779,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/riegos_programados.app/riegos_programados";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iddesagro.app/Iddesagro";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F34743AEE64395F8828012C /* Pods-riegos_programados.debug.xcconfig */;
+			baseConfigurationReference = 5F34743AEE64395F8828012C /* Pods-Iddesagro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = riegos_programados/Info.plist;
+				INFOPLIST_FILE = Iddesagro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -725,18 +798,18 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = riegos_programados;
+				PRODUCT_NAME = Iddesagro;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B4B9F9B7121A921A595C478 /* Pods-riegos_programados.release.xcconfig */;
+			baseConfigurationReference = 7B4B9F9B7121A921A595C478 /* Pods-Iddesagro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = riegos_programados/Info.plist;
+				INFOPLIST_FILE = Iddesagro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -744,14 +817,14 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = riegos_programados;
+				PRODUCT_NAME = Iddesagro;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78299C36A01E8316FF65D767 /* Pods-riegos_programados-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 78299C36A01E8316FF65D767 /* Pods-Iddesagro-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -762,14 +835,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "riegos_programados-tvOS/Info.plist";
+				INFOPLIST_FILE = "Iddesagro-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.riegos_programados-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Iddesagro-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -779,7 +852,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F61CCA7CA7E73C43D39C375E /* Pods-riegos_programados-tvOS.release.xcconfig */;
+			baseConfigurationReference = F61CCA7CA7E73C43D39C375E /* Pods-Iddesagro-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -790,14 +863,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "riegos_programados-tvOS/Info.plist";
+				INFOPLIST_FILE = "Iddesagro-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.riegos_programados-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Iddesagro-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -807,7 +880,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 630BBEF97D67F0A78537D88A /* Pods-riegos_programados-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 630BBEF97D67F0A78537D88A /* Pods-Iddesagro-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -817,24 +890,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "riegos_programados-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Iddesagro-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.riegos_programados-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Iddesagro-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/riegos_programados-tvOS.app/riegos_programados-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iddesagro-tvOS.app/Iddesagro-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53DB7E25EC147C8412C81B8E /* Pods-riegos_programados-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 53DB7E25EC147C8412C81B8E /* Pods-Iddesagro-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -844,17 +917,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "riegos_programados-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Iddesagro-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.riegos_programados-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Iddesagro-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/riegos_programados-tvOS.app/riegos_programados-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iddesagro-tvOS.app/Iddesagro-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -961,7 +1034,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "riegos_programadosTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "IddesagroTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -970,7 +1043,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "riegos_programados" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Iddesagro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -979,7 +1052,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "riegos_programados-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Iddesagro-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -988,7 +1061,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "riegos_programados-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Iddesagro-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -997,7 +1070,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "riegos_programados" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Iddesagro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

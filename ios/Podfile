@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'riegos_programados' do
-  # Pods for riegos_programados
+target 'Iddesagro' do
+  # Pods for Iddesagro
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -40,7 +40,9 @@ target 'riegos_programados' do
   # Make also sure you have use_frameworks! enabled
   use_frameworks!
 
-  target 'riegos_programadosTests' do
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  target 'IddesagroTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -48,10 +50,10 @@ target 'riegos_programados' do
   use_native_modules!
 end
 
-target 'riegos_programados-tvOS' do
-  # Pods for riegos_programados-tvOS
+target 'Iddesagro-tvOS' do
+  # Pods for Iddesagro-tvOS
 
-  target 'riegos_programados-tvOSTests' do
+  target 'Iddesagro-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -1,4 +1,4 @@
-package com.riegos_programados;
+package com.iddes.agro;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "riegos_programados";
+    return "Iddesagro";
   }
 }
