@@ -8,6 +8,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   StatusBar,
+  Switch,
 } from 'react-native';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 import geoViewport from '@mapbox/geo-viewport';
@@ -32,6 +33,8 @@ import IrrigationInfo from '../../component/irrigation/DataModal';
 import colors from '../../styles/colors';
 import Reactotron from 'reactotron-react-native';
 
+import styles from '../../styles/SignalPlotsStyles';
+
 MapboxGL.setAccessToken(
   'pk.eyJ1IjoiY2xldmVydGhpbmdzaW8iLCJhIjoiY2sxeWJ3MjlxMDB3MTNucGN6OHNla2NyZyJ9.B4zqV-Ej0lrL8CLyiUR6AA',
 );
@@ -50,38 +53,10 @@ const layerStyles = {
   },
 };
 
-const styles = StyleSheet.create({
-  percentageText: {
-    padding: 8,
-    textAlign: 'center',
-  },
-  buttonCnt: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  button: {
-    flex: 0.4,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 3,
-    backgroundColor: 'blue',
-    padding: 8,
-  },
-  buttonTxt: {
-    color: 'white',
-  },
-  items: {
-    backgroundColor: '#FFFFFF',
-    width: wp('90%'),
-    height: hp('6%'),
-    borderRadius: 8,
-  },
-});
+let automaticSignalingPoints = [];
+let manualSignalingPoints = [];
 
-let arrayLocations = [];
-
-class ViewIrrigationInfo extends React.Component {
+class SignalPlots extends React.Component {
   static propTypes = {
     ...BaseExamplePropTypes,
   };
@@ -106,6 +81,14 @@ class ViewIrrigationInfo extends React.Component {
       ],
       selected: '0',
       centerLocation: [-76.539554, 3.404657],
+      initSignalingIcon: 'ios-play',
+      startSignaling: false,
+      typeSignal: false,
+      isSignaling: false,
+      automaticallySignal: false,
+      signalManually: false,
+      geoJSON: smileyFaceGeoJSON,
+      currentCoords: [],
     };
 
     this.onDownloadProgress = this.onDownloadProgress.bind(this);
@@ -243,6 +226,99 @@ class ViewIrrigationInfo extends React.Component {
     Reactotron.log(location);
   }
 
+  selectTypeSignal(e) {
+    Reactotron.log(e);
+    this.setState({
+      typeSignal: e,
+    });
+  }
+
+  registerSignage() {
+    if (this.state.typeSignal) {
+      this.setState({
+        signalManually: true,
+        automaticallySignal: false,
+        startSignaling: true,
+      });
+    } else {
+      this.setState({
+        signalManually: false,
+        automaticallySignal: true,
+        //isSignaling: true,
+        initSignalingIcon: 'ios-pause',
+        startSignaling: true,
+      });
+    }
+    this.props.setVisibleModal(!this.props.visibleModal);
+  }
+
+  getActuallyPosition() {
+    manualSignalingPoints.pop();
+    manualSignalingPoints.push(this.state.currentCoords);
+    let firstPointsPosition = manualSignalingPoints[0];
+    manualSignalingPoints.push(firstPointsPosition);
+    Reactotron.log({manualSignalingPoints});
+    let features = {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'Polygon',
+        coordinates: [manualSignalingPoints],
+      },
+    };
+
+    if (
+      smileyFaceGeoJSON.features.length > 1 &&
+      manualSignalingPoints.length > 2
+    ) {
+      smileyFaceGeoJSON.features.pop();
+    }
+
+    smileyFaceGeoJSON.features.push(features);
+    this.setState({
+      geoJSON: smileyFaceGeoJSON,
+    });
+    Reactotron.log(smileyFaceGeoJSON);
+  }
+
+  getSignalAction() {
+    Reactotron.log(automaticSignalingPoints);
+    if (this.state.startSignaling) {
+      this.setState({
+        //isSignaling: true,
+        initSignalingIcon: 'ios-play',
+      });
+    }
+  }
+
+  setAutomaticSignalPoints(currentCoords) {
+    automaticSignalingPoints.pop();
+    automaticSignalingPoints.push(currentCoords);
+    //let count = automaticSignalingPoints.length;
+    let firstPointsPosition = automaticSignalingPoints[0];
+    automaticSignalingPoints.push(firstPointsPosition);
+    let features = {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'Polygon',
+        coordinates: [automaticSignalingPoints],
+      },
+    };
+    if (
+      smileyFaceGeoJSON.features.length > 1 &&
+      automaticSignalingPoints.length > 2
+    ) {
+      smileyFaceGeoJSON.features.pop();
+    }
+
+    smileyFaceGeoJSON.features.push(features);
+    this.setState({
+      geoJSON: smileyFaceGeoJSON,
+    });
+    Reactotron.log(smileyFaceGeoJSON);
+  }
+
   render() {
     const {offlineRegionStatus} = this.state;
     let ranchs = this.pikerItems();
@@ -268,22 +344,32 @@ class ViewIrrigationInfo extends React.Component {
                 location.coords.longitude,
                 location.coords.latitude,
               ];
-              arrayLocations.push(currentCoords);
-              Reactotron.log(arrayLocations);
+              if (this.state.automaticallySignal) {
+                this.setAutomaticSignalPoints(currentCoords);
+              }
+
               const initialCoords = this.state.centerLocation;
+
               this.setState({
                 centerLocation: initialCoords ? initialCoords : currentCoords,
+                currentCoords,
+              });
+              Reactotron.log({
+                initialCoords,
+                currentCoords,
+                state: this.state.centerLocation,
               });
             }}
           />
 
           <MapboxGL.Camera
-            zoomLevel={15}
             followUserLocation={true}
             centerCoordinate={this.state.centerLocation}
           />
 
-          <MapboxGL.ShapeSource id="smileyFaceSource" shape={smileyFaceGeoJSON}>
+          <MapboxGL.ShapeSource
+            id="smileyFaceSource"
+            shape={this.state.geoJSON}>
             <MapboxGL.FillLayer
               id="smileyFaceFill"
               style={layerStyles.smileyFace}
@@ -343,6 +429,49 @@ class ViewIrrigationInfo extends React.Component {
           </Text>
         </Button>
 
+        {this.state.startSignaling && (
+          <>
+            <Button
+              block
+              style={{
+                backgroundColor: '#6EEDD8',
+                position: 'absolute',
+                zIndex: 1,
+                height: 40,
+                width: 50,
+                marginTop: 50,
+                left: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)',
+                shadowOffset: {width: 0, height: 2},
+                shadowOpacity: 3,
+                shadowRadius: 2,
+              }}
+              onPress={() => this.getSignalAction()}>
+              <Icon name={this.state.initSignalingIcon} />
+            </Button>
+          </>
+        )}
+        {this.state.signalManually && (
+          <Button
+            block
+            style={{
+              backgroundColor: '#6EEDD8',
+              position: 'absolute',
+              zIndex: 1,
+              height: 40,
+              width: 50,
+              marginTop: 100,
+              left: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+              shadowOffset: {width: 0, height: 2},
+              shadowOpacity: 3,
+              shadowRadius: 2,
+            }}
+            onPress={() => this.getActuallyPosition()}>
+            <Icon name="ios-disc" />
+          </Button>
+        )}
+
         <IrrigationInfo>
           {ranchs}
           <Item style={styles.items}>
@@ -385,6 +514,13 @@ class ViewIrrigationInfo extends React.Component {
               onChangeText={text => this.setState({observation: text})}
             />
           </Item>
+          <Item style={styles.items}>
+            <Text>Realizar señalización manual </Text>
+            <Switch
+              onValueChange={value => this.selectTypeSignal(value)}
+              value={this.state.typeSignal}
+            />
+          </Item>
           <Item
             style={[
               styles.items,
@@ -401,9 +537,7 @@ class ViewIrrigationInfo extends React.Component {
                 shadowOpacity: 3,
                 shadowRadius: 2,
               }}
-              onPress={() =>
-                this.props.setVisibleModal(!this.props.visibleModal)
-              }>
+              onPress={() => this.registerSignage()}>
               <Text
                 uppercase={false}
                 style={{
@@ -478,4 +612,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ViewIrrigationInfo);
+export default connect(mapStateToProps, mapDispatchToProps)(SignalPlots);

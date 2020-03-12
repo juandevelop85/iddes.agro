@@ -58,7 +58,15 @@ class CreateOfflineRegion extends React.Component {
             this.props.changeScreen(this.props.navigation, 'ViewIrrigationInfo')
           }>
           <View style={styles.button}>
-            <Text style={styles.buttonTxt}>Ir</Text>
+            <Text style={styles.buttonTxt}>Ver señalizaciones</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            this.props.changeScreen(this.props.navigation, 'SignalPlots')
+          }>
+          <View style={styles.button}>
+            <Text style={styles.buttonTxt}>Señalizar</Text>
           </View>
         </TouchableOpacity>
       </>
