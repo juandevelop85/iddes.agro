@@ -4,6 +4,7 @@
     {
       "type": "Feature",
       "properties": {},
+      "name": "Hacienda",
       "geometry": {
         "type": "Polygon",
         "coordinates": [

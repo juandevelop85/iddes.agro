@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Dimensions,
   StyleSheet,
+  Platform,
 } from 'react-native';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 
@@ -16,6 +17,8 @@ import {StackActions, CommonActions} from '@react-navigation/native';
 MapboxGL.setAccessToken(
   'pk.eyJ1IjoiY2xldmVydGhpbmdzaW8iLCJhIjoiY2sxeWJ3MjlxMDB3MTNucGN6OHNla2NyZyJ9.B4zqV-Ej0lrL8CLyiUR6AA',
 );
+
+const IS_ANDROID = Platform.OS === 'android';
 
 const styles = StyleSheet.create({
   percentageText: {
@@ -37,6 +40,10 @@ const styles = StyleSheet.create({
   buttonTxt: {
     color: 'white',
   },
+  noPermissionsText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 });
 
 class CreateOfflineRegion extends React.Component {
@@ -45,12 +52,41 @@ class CreateOfflineRegion extends React.Component {
 
     this.state = {
       name: `test-${Date.now()}`,
+      isFetchingAndroidPermission: IS_ANDROID,
+      isAndroidPermissionGranted: false,
     };
+  }
+
+  async componentDidMount() {
+    if (IS_ANDROID) {
+      const isGranted = await MapboxGL.requestAndroidLocationPermissions();
+      this.setState({
+        isAndroidPermissionGranted: isGranted,
+        isFetchingAndroidPermission: false,
+      });
+    }
   }
 
   componentWillUnmount() {}
 
   render() {
+    if (IS_ANDROID && !this.state.isAndroidPermissionGranted) {
+      if (this.state.isFetchingAndroidPermission) {
+        return null;
+      }
+      return (
+        <SafeAreaView
+          style={[sheet.matchParent, {backgroundColor: colors.primary.blue}]}
+          forceInset={{top: 'always'}}>
+          <View style={sheet.matchParent}>
+            <Text style={styles.noPermissionsText}>
+              You need to accept location permissions in order to use this
+              example applications
+            </Text>
+          </View>
+        </SafeAreaView>
+      );
+    }
     return (
       <>
         <TouchableOpacity

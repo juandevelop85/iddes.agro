@@ -49,6 +49,7 @@ const layerStyles = {
   smileyFace: {
     fillAntialias: true,
     fillColor: 'red',
+    fillOpacity: 0.3,
     fillOutlineColor: 'rgba(255, 255, 255, 0.84)',
   },
 };
@@ -82,11 +83,11 @@ class SignalPlots extends React.Component {
       selected: '0',
       centerLocation: [-76.539554, 3.404657],
       initSignalingIcon: 'ios-play',
-      startSignaling: false,
-      typeSignal: false,
-      isSignaling: false,
-      automaticallySignal: false,
-      signalManually: false,
+      startSignaling: false, //Para indicar que se inicio la toma de geolocalizacion
+      typeSignal: false, //Indica que forma de toma de latitud y longitud se esta haciendo, manual = true, automatica = false
+      isSignaling: false, //Para indicar si la toma de la geolocalizacion esta en pausa y activa
+      automaticallySignal: false, //Para indicar que se esta tomando la geolocalizacion de forma automatica
+      signalManually: false, //Para indicar que se esta tomando la geolocalizacion de forma manual
       geoJSON: smileyFaceGeoJSON,
       currentCoords: [],
     };
@@ -239,12 +240,14 @@ class SignalPlots extends React.Component {
         signalManually: true,
         automaticallySignal: false,
         startSignaling: true,
+        isSignaling: true,
+        initSignalingIcon: 'ios-pause',
       });
     } else {
       this.setState({
         signalManually: false,
         automaticallySignal: true,
-        //isSignaling: true,
+        isSignaling: true,
         initSignalingIcon: 'ios-pause',
         startSignaling: true,
       });
@@ -252,41 +255,47 @@ class SignalPlots extends React.Component {
     this.props.setVisibleModal(!this.props.visibleModal);
   }
 
-  getActuallyPosition() {
-    manualSignalingPoints.pop();
-    manualSignalingPoints.push(this.state.currentCoords);
-    let firstPointsPosition = manualSignalingPoints[0];
-    manualSignalingPoints.push(firstPointsPosition);
-    Reactotron.log({manualSignalingPoints});
-    let features = {
-      type: 'Feature',
-      properties: {},
-      geometry: {
-        type: 'Polygon',
-        coordinates: [manualSignalingPoints],
-      },
-    };
+  getManualPosition() {
+    if (this.state.isSignaling) {
+      manualSignalingPoints.pop();
+      manualSignalingPoints.push(this.state.currentCoords);
+      let firstPointsPosition = manualSignalingPoints[0];
+      manualSignalingPoints.push(firstPointsPosition);
+      Reactotron.log({manualSignalingPoints});
+      let features = {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          type: 'Polygon',
+          coordinates: [manualSignalingPoints],
+        },
+      };
 
-    if (
-      smileyFaceGeoJSON.features.length > 1 &&
-      manualSignalingPoints.length > 2
-    ) {
-      smileyFaceGeoJSON.features.pop();
+      if (
+        smileyFaceGeoJSON.features.length > 1 &&
+        manualSignalingPoints.length > 2
+      ) {
+        smileyFaceGeoJSON.features.pop();
+      }
+
+      smileyFaceGeoJSON.features.push(features);
+      this.setState({
+        geoJSON: smileyFaceGeoJSON,
+      });
+      Reactotron.log(smileyFaceGeoJSON);
     }
-
-    smileyFaceGeoJSON.features.push(features);
-    this.setState({
-      geoJSON: smileyFaceGeoJSON,
-    });
-    Reactotron.log(smileyFaceGeoJSON);
   }
 
   getSignalAction() {
-    Reactotron.log(automaticSignalingPoints);
-    if (this.state.startSignaling) {
+    if (this.state.isSignaling) {
       this.setState({
-        //isSignaling: true,
+        isSignaling: false,
         initSignalingIcon: 'ios-play',
+      });
+    } else {
+      this.setState({
+        isSignaling: true,
+        initSignalingIcon: 'ios-pause',
       });
     }
   }
@@ -319,6 +328,8 @@ class SignalPlots extends React.Component {
     Reactotron.log(smileyFaceGeoJSON);
   }
 
+  stopSignaling() {}
+
   render() {
     const {offlineRegionStatus} = this.state;
     let ranchs = this.pikerItems();
@@ -344,7 +355,7 @@ class SignalPlots extends React.Component {
                 location.coords.longitude,
                 location.coords.latitude,
               ];
-              if (this.state.automaticallySignal) {
+              if (this.state.automaticallySignal && this.state.isSignaling) {
                 this.setAutomaticSignalPoints(currentCoords);
               }
 
@@ -363,11 +374,13 @@ class SignalPlots extends React.Component {
           />
 
           <MapboxGL.Camera
+            zoomLevel={15}
             followUserLocation={true}
             centerCoordinate={this.state.centerLocation}
           />
 
           <MapboxGL.ShapeSource
+            onPress={e => Reactotron.log({hola: 'Hola', e})}
             id="smileyFaceSource"
             shape={this.state.geoJSON}>
             <MapboxGL.FillLayer
@@ -439,8 +452,26 @@ class SignalPlots extends React.Component {
                 zIndex: 1,
                 height: 40,
                 width: 50,
-                marginTop: 50,
-                left: 0,
+                marginTop: 10,
+                left: 3,
+                shadowColor: 'rgba(0, 0, 0, 0.5)',
+                shadowOffset: {width: 0, height: 2},
+                shadowOpacity: 3,
+                shadowRadius: 2,
+              }}
+              onPress={() => this.stopSignaling()}>
+              <Icon name="ios-square" />
+            </Button>
+            <Button
+              block
+              style={{
+                backgroundColor: '#6EEDD8',
+                position: 'absolute',
+                zIndex: 1,
+                height: 40,
+                width: 50,
+                marginTop: 60,
+                left: 3,
                 shadowColor: 'rgba(0, 0, 0, 0.5)',
                 shadowOffset: {width: 0, height: 2},
                 shadowOpacity: 3,
@@ -451,24 +482,24 @@ class SignalPlots extends React.Component {
             </Button>
           </>
         )}
-        {this.state.signalManually && (
+        {this.state.signalManually && this.state.isSignaling && (
           <Button
             block
             style={{
               backgroundColor: '#6EEDD8',
               position: 'absolute',
               zIndex: 1,
-              height: 40,
-              width: 50,
-              marginTop: 100,
-              left: 0,
+              height: 60,
+              width: 60,
+              marginTop: 110,
+              left: 3,
               shadowColor: 'rgba(0, 0, 0, 0.5)',
               shadowOffset: {width: 0, height: 2},
               shadowOpacity: 3,
               shadowRadius: 2,
             }}
-            onPress={() => this.getActuallyPosition()}>
-            <Icon name="ios-disc" />
+            onPress={() => this.getManualPosition()}>
+            <Icon name="ios-pin" />
           </Button>
         )}
 
