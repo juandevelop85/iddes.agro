@@ -1,4 +1,5 @@
 import Reactotron from 'reactotron-react-native';
+import { URL_SERVER} from './Constants'
 
 class Api {
   static requestHeaders(token) {
@@ -13,7 +14,7 @@ class Api {
   static get(route, token) {
     const headers = Object.assign(this.requestHeaders(token));
 
-    return fetch(route, {
+    return fetch(URL_SERVER + route, {
       method: 'GET',
       headers: headers,
     })
@@ -36,7 +37,7 @@ class Api {
 
     let resp = [];
 
-    await fetch(route, {
+    await fetch(URL_SERVER + route, {
       method: 'POST',
       headers: headers,
       body: JSON.stringify(params),

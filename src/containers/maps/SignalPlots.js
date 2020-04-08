@@ -34,6 +34,7 @@ import colors from '../../styles/colors';
 import Reactotron from 'reactotron-react-native';
 
 import styles from '../../styles/SignalPlotsStyles';
+import Api from '../../lib/Api';
 
 MapboxGL.setAccessToken(
   'pk.eyJ1IjoiY2xldmVydGhpbmdzaW8iLCJhIjoiY2sxeWJ3MjlxMDB3MTNucGN6OHNla2NyZyJ9.B4zqV-Ej0lrL8CLyiUR6AA',
@@ -90,6 +91,7 @@ class SignalPlots extends React.Component {
       signalManually: false, //Para indicar que se esta tomando la geolocalizacion de forma manual
       geoJSON: smileyFaceGeoJSON,
       currentCoords: [],
+      followUserLocation: false,
     };
 
     this.onDownloadProgress = this.onDownloadProgress.bind(this);
@@ -328,7 +330,46 @@ class SignalPlots extends React.Component {
     Reactotron.log(smileyFaceGeoJSON);
   }
 
-  stopSignaling() {}
+  async stopSignaling() {
+
+
+    if(this.state.name == ""){
+      this.showMessage("Alerta", " Debes ingresar el nombre")
+      return;
+    }
+
+    if(this.state.hts == ""){
+      this.showMessage("Alerta", "Debes ingresar las hectareas")
+      return;
+    }
+
+    if(this.state.suerteAge == ""){
+      this.showMessage("Alerta", "Debes ingresar la edad de la suerte")
+      return;
+    }
+
+    if(this.state.variety == ""){
+      this.showMessage("Alerta", "Debes ingresar la edad de la variedad")
+      return;
+    }
+    
+    await Api.post("plots/v1/registerPlots", {
+      "name": this.state.name,
+      "hectares": this.state.hts,
+      "age": this.state.suerteAge,
+      "variety": this.state.variety,
+      "observations": this.state.observation,
+      "signaling": (this.state.typeSignal) ? manualSignalingPoints : automaticSignalingPoints,
+      "ranch": 1
+    }).then((success) => {
+        // TODO
+        this.showMessage("Alerta", success.result)
+    })
+  }
+
+  showMessage(title, text){
+    Alert.alert(title, text);
+  }
 
   render() {
     const {offlineRegionStatus} = this.state;
@@ -365,17 +406,17 @@ class SignalPlots extends React.Component {
                 centerLocation: initialCoords ? initialCoords : currentCoords,
                 currentCoords,
               });
-              Reactotron.log({
-                initialCoords,
-                currentCoords,
-                state: this.state.centerLocation,
-              });
+            }}
+            onDidFinishRenderingMapFully={r => {
+              this.setState({followUserLocation: true});
             }}
           />
 
           <MapboxGL.Camera
             zoomLevel={15}
-            followUserLocation={true}
+            followZoomLevel={15}
+            followUserLocation={this.state.followUserLocation}
+            followUserMode={MapboxGL.UserTrackingModes.FollowWithCourse}
             centerCoordinate={this.state.centerLocation}
           />
 
@@ -459,7 +500,7 @@ class SignalPlots extends React.Component {
                 shadowOpacity: 3,
                 shadowRadius: 2,
               }}
-              onPress={() => this.stopSignaling()}>
+              onPress={() => this.stopSignaling().done()}>
               <Icon name="ios-square" />
             </Button>
             <Button

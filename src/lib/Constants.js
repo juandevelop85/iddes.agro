@@ -7,10 +7,9 @@ export const TOKEN_LOCALITY_KEY = 'tokenLocalityKey';
 export const TOKEN_GEOLOCATION_KEY = 'tokenGeolocationKey';
 export const TOKEN_PUSH_NOTIFICATION = 'tokenPushNotification';
 export const DATA_PRODUCT_STORE = 'dataProductStore';
-//export const URL_SERVER = 'http://iddesagro.eastus2.cloudapp.azure.com/';
-//export const URL_SERVER = URL_SERVER + 'api/v1/';
 
-export const URL_SERVER = 'http://localhost/';
+//export const URL_SERVER = 'http://localhost/';
+export const URL_SERVER = 'http://ec2-18-222-70-186.us-east-2.compute.amazonaws.com/';
 //export const URL_SERVER = URL_SERVER + 'api/v1/';
 
 export const GOOGLE_API_KEY = 'AIzaSyAJO4ZJE7CCIheNyfsk9dfLV4hA1PRHALA';

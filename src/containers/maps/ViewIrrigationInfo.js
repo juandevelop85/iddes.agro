@@ -31,6 +31,7 @@ import IrrigationInfo from '../../component/irrigation/DataModal';
 
 import colors from '../../styles/colors';
 import Reactotron from 'reactotron-react-native';
+import Api from '../../lib/Api';
 
 MapboxGL.setAccessToken(
   'pk.eyJ1IjoiY2xldmVydGhpbmdzaW8iLCJhIjoiY2sxeWJ3MjlxMDB3MTNucGN6OHNla2NyZyJ9.B4zqV-Ej0lrL8CLyiUR6AA',
@@ -106,6 +107,8 @@ class ViewIrrigationInfo extends React.Component {
       ],
       selected: '0',
       centerLocation: [-76.539554, 3.404657],
+      geoJSON: smileyFaceGeoJSON,
+      followUserLocation: false,
     };
 
     this.onDownloadProgress = this.onDownloadProgress.bind(this);
@@ -117,10 +120,39 @@ class ViewIrrigationInfo extends React.Component {
     this.onUserLocationUpdate = this.onUserLocationUpdate.bind(this);
   }
 
+  componentWillMount() {
+    this.getPlotsbyRanch().done();
+  }
+
   componentWillUnmount() {
     // avoid setState warnings if we back out before we finishing downloading
     MapboxGL.offlineManager.deletePack(this.state.name);
     MapboxGL.offlineManager.unsubscribe('test');
+  }
+
+  async getPlotsbyRanch() {
+    await Api.post('plots/v1/findPlotsByRanch', {ranch: 1}).then(success => {
+      success.result.map((item, index) => {
+        let features = {
+          type: 'Feature',
+          properties: {},
+          geometry: {
+            type: 'Polygon',
+            coordinates: [item.signaling],
+          },
+        };
+        
+        /*if (smileyFaceGeoJSON.features.length > 1) {
+          smileyFaceGeoJSON.features.pop();
+        }*/
+
+        smileyFaceGeoJSON.features.push(features);
+      });
+      
+      this.setState({
+        geoJSON: smileyFaceGeoJSON,
+      });
+    });
   }
 
   async onDidFinishLoadingStyle() {
@@ -135,10 +167,7 @@ class ViewIrrigationInfo extends React.Component {
     const options = {
       name: this.state.name,
       styleURL: MapboxGL.StyleURL.Street,
-      bounds: [
-        [bounds[0], bounds[1]],
-        [bounds[2], bounds[3]],
-      ],
+      bounds: [[bounds[0], bounds[1]], [bounds[2], bounds[3]]],
       minZoom: 10,
       maxZoom: 20,
     };
@@ -231,7 +260,7 @@ class ViewIrrigationInfo extends React.Component {
         onValueChange={value => this.selectRace(value)}
         mode="dropdown"
         iosIcon={<Icon name="arrow-down" />}
-        placeholder="Select your SIM"
+        placeholder=""
         placeholderStyle={{color: '#bfc6ea'}}
         placeholderIconColor="#007aff">
         {pickerItems}
@@ -257,7 +286,7 @@ class ViewIrrigationInfo extends React.Component {
         <MapboxGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
-          styleURL={MapboxGL.StyleURL.TrafficNight}
+          //styleURL={MapboxGL.StyleURL.TrafficNight}
           onDidFinishLoadingMap={this.onDidFinishLoadingStyle}
           onUserLocationUpdate={this.onUserLocationUpdate}
           userTrackingMode={MapboxGL.UserTrackingModes.Follow}
@@ -268,53 +297,36 @@ class ViewIrrigationInfo extends React.Component {
                 location.coords.longitude,
                 location.coords.latitude,
               ];
-              arrayLocations.push(currentCoords);
-              Reactotron.log(arrayLocations);
               const initialCoords = this.state.centerLocation;
               this.setState({
                 centerLocation: initialCoords ? initialCoords : currentCoords,
               });
+              Reactotron.log({
+                centerLocation: this.state.centerLocation,
+              });
+            }}
+            onDidFinishRenderingMapFully={r => {
+              this.setState({followUserLocation: true});
             }}
           />
 
           <MapboxGL.Camera
             zoomLevel={15}
-            followUserLocation={true}
+            followZoomLevel={15}
+            followUserLocation={this.state.followUserLocation}
+            followUserMode={MapboxGL.UserTrackingModes.FollowWithCourse}
             centerCoordinate={this.state.centerLocation}
           />
 
-          <MapboxGL.ShapeSource id="smileyFaceSource" shape={smileyFaceGeoJSON}>
+          <MapboxGL.ShapeSource
+            id="smileyFaceSource"
+            shape={this.state.geoJSON}>
             <MapboxGL.FillLayer
               id="smileyFaceFill"
               style={layerStyles.smileyFace}
             />
           </MapboxGL.ShapeSource>
         </MapboxGL.MapView>
-
-        <Button
-          block
-          style={{
-            backgroundColor: '#6EEDD8',
-            position: 'absolute',
-            zIndex: 1,
-            height: 30,
-            width: 150,
-            marginTop: 50,
-            right: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)',
-            shadowOffset: {width: 0, height: 2},
-            shadowOpacity: 3,
-            shadowRadius: 2,
-          }}
-          onPress={() => this.props.setVisibleModal(!this.props.visibleModal)}>
-          <Text
-            uppercase={false}
-            style={{
-              fontSize: 13,
-            }}>
-            Ingresar información
-          </Text>
-        </Button>
 
         <Button
           block
@@ -478,4 +490,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ViewIrrigationInfo);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(ViewIrrigationInfo);
